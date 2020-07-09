@@ -86,7 +86,8 @@
   </div>
 </template>
 
-<script>import Icon from '../icon'
+<script>
+import Icon from '../icon'
 import Popup from '../popup'
 import PopupTitlebar from '../popup/title-bar'
 import popupMixin from '../popup/mixins'
@@ -95,11 +96,12 @@ import RadioList from '../radio-list'
 import radioMixin from '../radio/mixins'
 import ScrollView from '../scroll-view'
 import CheckList from '../check-list'
+import methodsMixin from './mixins/expose-methods'
 
 export default {
   name: 'md-selector',
 
-  mixins: [popupMixin, popupTitleBarMixin, radioMixin],
+  mixins: [popupMixin, popupTitleBarMixin, radioMixin, methodsMixin],
 
   components: {
     [Icon.name]: Icon,
@@ -288,7 +290,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .md-selector
